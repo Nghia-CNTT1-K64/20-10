@@ -1,0 +1,151 @@
+/* Định dạng cơ bản */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Định dạng container chính */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Đảm bảo chiều rộng phù hợp với các màn hình nhỏ */
+}
+
+/* Phần tiêu đề và mô tả */
+.header h1 {
+    font-size: 36px;
+    color: #ff4081;
+    margin-bottom: 10px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.header p {
+    font-size: 20px;
+    color: #555;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Ảnh hoa */
+.flowers {
+    margin: 20px 0;
+}
+
+.flower {
+    width: 80px;
+    animation: float 4s infinite ease-in-out;
+    margin: 0 10px;
+}
+
+/* Nút nhận lời chúc */
+#btnMessage {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+/* Hộp thông điệp */
+.message {
+    display: none;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #555;
+}
+
+/* Hiệu ứng hoạt hình */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive cho các màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .header h1 {
+        font-size: 28px;
+    }
+    .header p {
+        font-size: 18px;
+    }
+    .flower {
+        width: 60px; /* Giảm kích thước hoa cho màn hình nhỏ */
+    }
+    #btnMessage {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .message {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 24px;
+    }
+    .header p {
+        font-size: 16px;
+    }
+    .flower {
+        width: 50px;
+    }
+    #btnMessage {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .message {
+        font-size: 18px;
+    }
+}
